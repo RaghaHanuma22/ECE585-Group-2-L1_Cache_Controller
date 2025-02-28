@@ -1,0 +1,146 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+R0
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX
+T_opt
+!s110 1740719409
+VTh:]@J5WCDkK=cRc>M4VY1
+Z2 04 11 4 work BinToHex_tb fast 0
+=1-525400b63b2a-67c14530-9817e-7bce
+R0
+Z3 !s12f OEM100
+Z4 !s12b OEM100
+Z5 !s124 OEM100
+Z6 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2024.2;79
+vBinToHex
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1740719257
+!i10b 1
+!s100 iJz8J9QREAmWY^kKik>3[2
+IH2KUkG@8mG77Fl?8IKlDB0
+S1
+R1
+w1740718431
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv
+!i122 4
+L0 1 29
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z13 !s108 1740719257.000000
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv|
+!i113 0
+Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@bin@to@hex
+vBinToHex_tb
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv
+R9
+R10
+!i10b 1
+!s100 RJKOkFQi6AQoN8HNQ^Bl^3
+IO?O?=A1Mg:@5BR_Q8M;4K0
+S1
+R1
+w1740718756
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv
+!i122 5
+L0 1 39
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv|
+!i113 0
+R14
+R7
+n@bin@to@hex_tb
+vHexToBin
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+R9
+Z15 !s110 1740719258
+!i10b 1
+!s100 K;j14879QMZziA^Yl6`7@2
+ICQmeZ7I>kjQkY87hjQV0_2
+S1
+R1
+w1740718557
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+!i122 6
+L0 2 30
+R11
+R12
+r1
+!s85 0
+31
+Z16 !s108 1740719258.000000
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
+!i113 0
+R14
+R7
+n@hex@to@bin
+vHexToBin_tb
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+R9
+R15
+!i10b 1
+!s100 mLUnh8K8Gb1_LU`z9T>2]1
+IjMKPSnFR]>ZKGL]QmBN8m0
+S1
+R1
+w1740718897
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+!i122 7
+L0 1 61
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
+!i113 0
+R14
+R7
+n@hex@to@bin_tb
+Ttb
+!s110 1740719357
+VZm6Q>M:KC`BUSbU]RBbMB3
+R2
+R0
+R3
+R4
+R5
+R6
+o
+R7
+ntb
+R8
+R1

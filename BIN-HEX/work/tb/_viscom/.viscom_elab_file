@@ -1,0 +1,1 @@
+/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 393216 -reportprogress 300 work.BinToHex_tb -o tb +__design_bin_path+/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX
