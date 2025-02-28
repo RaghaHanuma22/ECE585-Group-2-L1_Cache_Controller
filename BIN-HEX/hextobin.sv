@@ -1,32 +1,17 @@
-
-module HexToBin (
-    input logic [7:0] hex_string[7:0],
-    output logic [31:0] binary
+module HexToBinary (
+  input logic [31:0] hex_in,      // 32-bit hexadecimal input
+  output logic [31:0] bin_out    // 128-bit binary output (32 bits per hex digit)
 );
-    int i;
+
+    // Always block to convert the hex input to binary
     always_comb begin
-        binary = 32'b0;
-        for (i = 0; i < 8; i++) begin
-            case (hex_string[i])
-                "0": binary[i*4 +: 4] = 4'h0;
-                "1": binary[i*4 +: 4] = 4'h1;
-                "2": binary[i*4 +: 4] = 4'h2;
-                "3": binary[i*4 +: 4] = 4'h3;
-                "4": binary[i*4 +: 4] = 4'h4;
-                "5": binary[i*4 +: 4] = 4'h5;
-                "6": binary[i*4 +: 4] = 4'h6;
-                "7": binary[i*4 +: 4] = 4'h7;
-                "8": binary[i*4 +: 4] = 4'h8;
-                "9": binary[i*4 +: 4] = 4'h9;
-                "A": binary[i*4 +: 4] = 4'hA;
-                "B": binary[i*4 +: 4] = 4'hB;
-                "C": binary[i*4 +: 4] = 4'hC;
-                "D": binary[i*4 +: 4] = 4'hD;
-                "E": binary[i*4 +: 4] = 4'hE;
-                "F": binary[i*4 +: 4] = 4'hF;
-                default: binary[i*4 +: 4] = 4'h0;
-            endcase
+        bin_out = 0;  // Initialize the binary output to 0
+        for (int i = 0; i < 8; i++) begin  // Loop through each hexadecimal digit (8 digits for 32-bit hex)
+            // Extract each hex digit and convert it to a 4-bit binary value
+            bin_out[4*i +: 4] = hex_in[4*i +: 4];  
         end
     end
+
 endmodule
+
 

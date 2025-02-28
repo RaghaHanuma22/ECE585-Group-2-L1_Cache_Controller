@@ -1,9 +1,9 @@
 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
 QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
--- Compiling module HexToBin_tb
+-- Compiling module Testbench
 
 Top level modules:
-	HexToBin_tb
+	Testbench
 
 } {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv
 QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
@@ -12,19 +12,18 @@ QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 Top level modules:
 	BinToHex_tb
 
-} {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv {2 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
-QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
--- Compiling module HexToBin
-** Warning: /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv(3): (vlog-13314) Defaulting port 'hex_string' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	HexToBin
-
 } {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv
 QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 -- Compiling module BinToHex
 
 Top level modules:
 	BinToHex
+
+} {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module HexToBinary
+
+Top level modules:
+	HexToBinary
 
 } {} {}}

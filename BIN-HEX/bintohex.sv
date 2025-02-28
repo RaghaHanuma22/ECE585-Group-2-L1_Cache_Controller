@@ -1,11 +1,11 @@
 module BinToHex (
     input logic [31:0] binary,
-    output logic [7:0] hex_string[7:0]
+    output logic [7:0] hex_string [7:0]
 );
     int i;
     always_comb begin
         for (i = 0; i < 8; i++) begin
-            case (binary[i*4 +: 4])
+            case (binary[28 - (i * 4) +: 4]) // Extracts bits correctly (MSB first)
                 4'h0: hex_string[i] = "0";
                 4'h1: hex_string[i] = "1";
                 4'h2: hex_string[i] = "2";
@@ -22,8 +22,9 @@ module BinToHex (
                 4'hD: hex_string[i] = "D";
                 4'hE: hex_string[i] = "E";
                 4'hF: hex_string[i] = "F";
-                default: hex_string[i] = "?";
+                default: hex_string[i] = "?"; // Error case
             endcase
         end
     end
 endmodule
+

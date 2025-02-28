@@ -12,52 +12,42 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# Loading project final_project
-# reading /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../modelsim.ini
 # Loading project Conversions
 # Compile of bintohex.sv was successful.
 # Compile of bintohex_tb.sv was successful.
-# Compile of hextobin.sv was successful with warnings.
+# Compile of hextobin.sv was successful.
 # Compile of hextobin_tb.sv was successful.
 # 4 compiles, 0 failed with no errors.
-vopt work.BinToHex_tb -o tb
+vopt work.HexToBin_tb -o tb
 # QuestaSim-64 vopt 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 21:09:16 on Feb 27,2025
-# vopt -reportprogress 300 work.BinToHex_tb -o tb 
+# Start time: 22:33:26 on Feb 27,2025
+# vopt -reportprogress 300 work.HexToBin_tb -o tb 
 # 
 # Top level modules:
-# 	BinToHex_tb
+# 	HexToBin_tb
 # 
 # Analyzing design...
-# -- Loading module BinToHex_tb
-# -- Loading module BinToHex
-# Optimizing 2 design-units (inlining 1/2 module instances):
-# -- Inlining module BinToHex(fast)
-# -- Optimizing module BinToHex_tb(fast)
+# -- Loading module HexToBin_tb
+# -- Loading module HexToBin
+# Incremental compilation check found no design-units have changed.
 # Optimized design name is tb
-# End time: 21:09:17 on Feb 27,2025, Elapsed time: 0:00:01
+# End time: 22:33:27 on Feb 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.BinToHex_tb -voptargs=+acc
-# vsim work.BinToHex_tb -voptargs="+acc" 
-# Start time: 21:10:08 on Feb 27,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+vsim work.HexToBin_tb -voptargs=+acc
+# vsim work.HexToBin_tb -voptargs="+acc" 
+# Start time: 22:33:37 on Feb 27,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # Loading sv_std.std
-# Loading work.BinToHex_tb(fast)
-# Loading work.BinToHex(fast)
-run-all
-# invalid command name "run-all"
+# Loading work.HexToBin_tb(fast)
+# Loading work.HexToBin(fast)
 run -all
-# Binary: 12345678 -> Hex: 12345678
-# Binary: abcdef01 -> Hex: ABCDEF01
-# Binary: 00000000 -> Hex: 00000000
-# Binary: ffffffff -> Hex: FFFFFFFF
-# ** Note: $stop    : /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv(37)
-#    Time: 40 ns  Iteration: 0  Instance: /BinToHex_tb
-# Break in Module BinToHex_tb at /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv line 37
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
+# Hex: 12345678 -> Binary: 10000111011001010100001100100001
+# Hex: ABCDEF12 -> Binary: 00100001111111101101110010111010
+# Hex: 00000000 -> Binary: 00000000000000000000000000000000
+# Hex: FFFFFFFF -> Binary: 11111111111111111111111111111111
+# ** Note: $stop    : /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv(59)
+#    Time: 40 ns  Iteration: 0  Instance: /HexToBin_tb
+# Break in Module HexToBin_tb at /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv line 59
 exit
-# End time: 21:18:54 on Feb 27,2025, Elapsed time: 0:08:46
-# Errors: 0, Warnings: 7
+# End time: 22:34:51 on Feb 27,2025, Elapsed time: 0:01:14
+# Errors: 0, Warnings: 2
