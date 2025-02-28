@@ -3,6 +3,9 @@ K4
 z2
 Z0 !s99 nomlopt
 R0
+!s11f MIXED_VERSIONS
+R0
+R0
 R0
 !s12c _opt1
 R0
@@ -13,7 +16,6 @@ R0
 R1
 R0
 R0
-!s11f vlog 2024.2 2024.05, May 20 2024
 13
 !s112 1.1
 !i10d 8192
@@ -39,7 +41,7 @@ R2
 T_opt1
 !s110 1740722802
 VZjDd4@5dHMKzak<B2LRKB0
-Z10 04 11 4 work HexToBin_tb fast 0
+04 11 4 work HexToBin_tb fast 0
 =1-5254006cf05e-67c15271-ee03f-6b09
 R0
 R3
@@ -51,10 +53,20 @@ R8
 n@_opt1
 R9
 R2
+T_opt2
+!s110 1740725044
+V@Og08?4GK3WNY>YdG?n<02
+Z10 04 11 4 work hextobin_tb fast 0
+=1-525400b63b2a-67c15b33-bf10a-3edc
+R5
+R7
+R8
+n@_opt2
+Z11 OL;O;2021.3_1;73
 vBinToHex
 2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv
-Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z12 !s110 1740724389
+Z12 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z13 !s110 1740724389
 !i10b 1
 !s100 VU^[M>;YR;X[Ba^D4:cQY3
 IR[RQAhaO<<bYnL8eXIiBG3
@@ -65,22 +77,22 @@ w1740722288
 F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv
 !i122 24
 L0 1 29
-Z13 VDg1SIo80bB@j0V0VzS_@n1
-Z14 OL;L;2024.2;79
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+Z15 OL;L;2024.2;79
 r1
 !s85 0
 31
-Z15 !s108 1740724389.000000
+Z16 !s108 1740724389.000000
 !s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex.sv|
 !i113 0
-Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z17 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R8
 n@bin@to@hex
 vBinToHex_tb
 2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv
-R11
 R12
+R13
 !i10b 1
 !s100 `;nIcaePHRcM8K;BTSkL@3
 IC4SD[4D@3TohFdSB<7L0e2
@@ -91,21 +103,21 @@ w1740722315
 F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv
 !i122 25
 L0 1 45
-R13
 R14
+R15
 r1
 !s85 0
 31
-R15
+R16
 !s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/bintohex_tb.sv|
 !i113 0
-R16
+R17
 R8
 n@bin@to@hex_tb
 vHexToBin
-Z17 2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
-R11
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+R12
 Z18 !s110 1740722758
 !i10b 1
 !s100 K;j14879QMZziA^Yl6`7@2
@@ -113,25 +125,73 @@ ICQmeZ7I>kjQkY87hjQV0_2
 S1
 R2
 w1740722751
-Z19 8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
-Z20 F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
 !i122 14
 L0 2 30
-R13
 R14
+R15
 r1
 !s85 0
 31
 !s108 1740722757.000000
-Z21 !s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
-Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
 !i113 0
-R16
+R17
 R8
 n@hex@to@bin
+vhextobin
+R12
+!s110 1740725014
+!i10b 1
+!s100 eKYTNhn3@72::knzZgOTc1
+I?LZ6a`IdZV<:G@eME7lDZ0
+S1
+Z19 d/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX
+w1740725004
+Z20 8/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+Z21 F/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+!i122 31
+Z22 L0 1 15
+R14
+Z23 OL;L;2021.3_1;73
+r1
+!s85 0
+31
+Z24 !s108 1740725014.000000
+Z25 !s107 /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv|
+!i113 0
+R17
+R8
+vhextobin_tb
+R12
+!s110 1740725015
+!i10b 1
+!s100 C8Nd@lfn97;c2aGfn>7f_3
+IT?A3`J9BR9dL7O7abR=Wz0
+S1
+R19
+w1740724993
+Z27 8/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+Z28 F/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+!i122 32
+Z29 L0 1 35
+R14
+R23
+r1
+!s85 0
+31
+R24
+Z30 !s107 /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
+!i113 0
+R17
+R8
 vHexToBin_tb
-Z23 2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
-R11
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+R12
 R18
 !i10b 1
 !s100 mLUnh8K8Gb1_LU`z9T>2]1
@@ -139,84 +199,79 @@ IjMKPSnFR]>ZKGL]QmBN8m0
 S1
 R2
 w1740718897
-Z24 8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
-Z25 F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
 !i122 15
 L0 1 61
-R13
 R14
+R15
 r1
 !s85 0
 31
 !s108 1740722758.000000
-Z26 !s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv|
 !i113 0
-R16
+R17
 R8
 n@hex@to@bin_tb
 vHexToBinary
-R17
-R11
 R12
+Z32 !s110 1740724845
 !i10b 1
 !s100 Cd@l@OK?8GJKZO8C1OE[10
-IKh=S5JLQhgS6;7@iX@mIh2
+IR[AcMk`[4G]a]?9Z`KiUD3
 S1
-R2
-w1740724325
 R19
+w1740724676
 R20
-!i122 26
-L0 1 15
-R13
+R21
+!i122 29
+R22
 R14
+R23
 r1
 !s85 0
 31
-R15
-R21
-R22
+Z33 !s108 1740724845.000000
+R25
+R26
 !i113 0
-R16
+R17
 R8
 n@hex@to@binary
-Ttb
-!s110 1740724407
-VSR@DzCW9bl1kG<aKPe1W60
+Ttb1
+!s110 1740725027
+VNF^eMmm_1EWDjVI`XNk3<3
 R10
-R0
-R3
-R4
 R5
-R6
 o
 R8
-ntb
-R9
-vTestbench
-R23
+ntb1
 R11
-!s110 1740724390
+R2
+vTestbench
+R12
+R32
 !i10b 1
 !s100 W<?A:KZ?KXedJ_HHSM:]E1
-IT[U=jC6eA1zo0ADoO7@cD3
+IoG;7KK<>eZ_U_8Fa`3k^A0
 S1
-R2
-w1740724358
-R24
-R25
-!i122 27
-L0 1 35
-R13
+R19
+w1740724709
+R27
+R28
+!i122 30
+R29
 R14
+R23
 r1
 !s85 0
 31
-!s108 1740724390.000000
-R26
-R27
+R33
+R30
+R31
 !i113 0
-R16
+R17
 R8
 n@testbench

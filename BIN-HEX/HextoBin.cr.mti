@@ -1,0 +1,15 @@
+/u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv {1 {vlog -work work -vopt -sv -stats=none /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin.sv
+QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+-- Compiling module hextobin
+
+Top level modules:
+	hextobin
+
+} {} {}} /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv {1 {vlog -work work -vopt -sv -stats=none /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv
+QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+-- Compiling module hextobin_tb
+
+Top level modules:
+	hextobin_tb
+
+} {} {}}

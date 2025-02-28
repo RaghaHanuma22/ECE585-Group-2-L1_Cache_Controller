@@ -1,4 +1,4 @@
-module Testbench;
+module hextobin_tb;
 
     logic [31:0] hex_input;       // 32-bit hexadecimal input
     logic [31:0] binary_output;   // 32-bit binary output

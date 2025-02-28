@@ -1,4 +1,4 @@
-module HexToBinary (
+module hextobin (
   input logic [31:0] hex_in,      // 32-bit hexadecimal input
   output logic [31:0] bin_out    // 128-bit binary output (32 bits per hex digit)
 );
@@ -13,5 +13,4 @@ module HexToBinary (
     end
 
 endmodule
-
 
