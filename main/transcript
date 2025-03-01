@@ -1,0 +1,450 @@
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 17:52:45 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# ** Error: msd.sv(46): (vlog-2990) Illegal operation on unpacked type.
+# ** Error (suppressible): msd.sv(46): (vlog-7041) String assignment:  Assigning a string to a packed type requires a cast.
+# End time: 17:52:46 on Feb 28,2025, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 1
+# /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog msd.sv"
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 17:57:02 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# ** Error (suppressible): msd.sv(47): (vlog-2244) Variable 'hex_str' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# End time: 17:57:02 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 1
+# /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog msd.sv"
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 17:57:25 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 17:57:26 on Feb 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim msd 
+# Start time: 17:57:26 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 0x0badbad0
+# Leading bit: 0, Hex value: 0x12adbad2
+# Leading bit: 0, Hex value: 0x2badbad0
+# Leading bit: 0, Hex value: 0x06adbad0
+# Leading bit: 0, Hex value: 0x1badbad1
+# Leading bit: 0, Hex value: 0x21adbad0
+# Leading bit: 0, Hex value: 0x7badbad0
+# Leading bit: 0, Hex value: 0x02adbad0
+# Leading bit: 0, Hex value: 0x03adbad2
+# Leading bit: 0, Hex value: 0x24adbad0
+# Leading bit: 0, Hex value: 0x05adbad0
+# Leading bit: 0, Hex value: 0x16adbad1
+# Leading bit: 0, Hex value: 0x27adbad0
+# Leading bit: 0, Hex value: 0x78adbad0
+# Leading bit: 0, Hex value: 0x17adbad0
+# Leading bit: 0, Hex value: 0x17adbad0
+# Leading bit: 0, Hex value: 0x0badbad0
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:07:46 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:07:46 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:07:46 on Feb 28,2025, Elapsed time: 0:10:20
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:07:46 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 0x00000000
+# Leading bit: 0, Hex value: 0x00000001
+# Failed to convert hex string: 2BADBAD0
+# Leading bit: 0, Hex value: 0x00000000
+# Leading bit: 0, Hex value: 0x00000001
+# Failed to convert hex string: 21ADBAD0
+# Failed to convert hex string: 7BADBAD0
+# Leading bit: 0, Hex value: 0x00000000
+# Leading bit: 0, Hex value: 0x00000000
+# Failed to convert hex string: 24ADBAD0
+# Leading bit: 0, Hex value: 0x00000000
+# Leading bit: 0, Hex value: 0x00000001
+# Failed to convert hex string: 27ADBAD0
+# Failed to convert hex string: 78ADBAD0
+# Leading bit: 0, Hex value: 0x00000001
+# Leading bit: 0, Hex value: 0x00000001
+# Leading bit: 0, Hex value: 0x00000000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:08:33 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:08:33 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:08:33 on Feb 28,2025, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:08:33 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Failed to convert hex string: 2BADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Failed to convert hex string: 21ADBAD0
+# Failed to convert hex string: 7BADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Failed to convert hex string: 24ADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Failed to convert hex string: 27ADBAD0
+# Failed to convert hex string: 78ADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:09:02 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:09:02 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:09:02 on Feb 28,2025, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:09:02 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Failed to convert hex string: 2BADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Failed to convert hex string: 21ADBAD0
+# Failed to convert hex string: 7BADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Failed to convert hex string: 24ADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Failed to convert hex string: 27ADBAD0
+# Failed to convert hex string: 78ADBAD0
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Leading bit: 0, Hex value: 00000000000000000000000000000001
+# Leading bit: 0, Hex value: 00000000000000000000000000000000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:09:15 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:09:15 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:09:15 on Feb 28,2025, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:09:15 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 0, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 0, Hex value: 00010111101011011011101011010000
+# Leading bit: 0, Hex value: 00010111101011011011101011010000
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:27:53 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:27:53 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:27:53 on Feb 28,2025, Elapsed time: 0:18:38
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:27:53 on Feb 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 0, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 0, Hex value: 00010111101011011011101011010000
+# Leading bit: 0, Hex value: 00010111101011011011101011010000
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:28:07 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:28:07 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:28:07 on Feb 28,2025, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:28:07 on Feb 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 0, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 0, Hex value: 00010111101011011011101011010000
+# Leading bit: 0, Hex value: 00010111101011011011101011010000
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:28:45 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:28:45 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:28:45 on Feb 28,2025, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:28:45 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 2, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 4, Hex value: 00010111101011011011101011010000
+# Leading bit: 6, Hex value: 00010111101011011011101011010000
+# Leading bit: 4, Hex value: 00001011101011011011101011010000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:29:20 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:29:20 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:29:20 on Feb 28,2025, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:29:20 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 2, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 4, Hex value: 00010111101011011011101011010000
+# Leading bit: 6, Hex value: 00010111101011011011101011010000
+# Leading bit: 4, Hex value: 00001011101011011011101011010000
+# 1011101011011011101011010000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:29:47 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:29:47 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:29:47 on Feb 28,2025, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:29:47 on Feb 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 2, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 4, Hex value: 00010111101011011011101011010000
+# Leading bit: 6, Hex value: 00010111101011011011101011010000
+# Leading bit: 4, Hex value: 00001011101011011011101011010000
+# 00001011101011011011101011010000
+# File operation done!
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 18:30:32 on Feb 28,2025
+# vlog msd.sv 
+# -- Compiling module msd
+# 
+# Top level modules:
+# 	msd
+# End time: 18:30:32 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:30:32 on Feb 28,2025, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 1
+# vsim msd 
+# Start time: 18:30:32 on Feb 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.msd(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 40
+# File opened!!
+# Leading bit: 0, Hex value: 00001011101011011011101011010000
+# Leading bit: 0, Hex value: 00010010101011011011101011010010
+# Leading bit: 0, Hex value: 00101011101011011011101011010000
+# Leading bit: 0, Hex value: 00000110101011011011101011010000
+# Leading bit: 2, Hex value: 00011011101011011011101011010001
+# Leading bit: 0, Hex value: 00100001101011011011101011010000
+# Leading bit: 0, Hex value: 01111011101011011011101011010000
+# Leading bit: 0, Hex value: 00000010101011011011101011010000
+# Leading bit: 0, Hex value: 00000011101011011011101011010010
+# Leading bit: 0, Hex value: 00100100101011011011101011010000
+# Leading bit: 0, Hex value: 00000101101011011011101011010000
+# Leading bit: 0, Hex value: 00010110101011011011101011010001
+# Leading bit: 0, Hex value: 00100111101011011011101011010000
+# Leading bit: 0, Hex value: 01111000101011011011101011010000
+# Leading bit: 4, Hex value: 00010111101011011011101011010000
+# Leading bit: 6, Hex value: 00010111101011011011101011010000
+# Leading bit: 4, Hex value: 00001011101011011011101011010001
+# 00001011101011011011101011010001
+# File operation done!
+# End time: 20:15:15 on Feb 28,2025, Elapsed time: 1:44:43
+# Errors: 0, Warnings: 1

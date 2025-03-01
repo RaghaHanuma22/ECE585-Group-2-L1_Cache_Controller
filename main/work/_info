@@ -1,0 +1,55 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.3_1 2021.08, Aug 15 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/u/ragha/585_Final_Project/git_files/ECE585-Group-2-L1_Cache_Controller/main
+T_opt
+!s110 1740796188
+V8on6zEbh=WWgPM0ZeCKhK2
+04 3 4 work msd fast 0
+=1-525400b63b2a-67c2711b-90f41-33f1
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.3_1;73
+R1
+vmsd
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1740796232
+!i10b 1
+!s100 f__3_RZZAcz`:`Q]^UcW41
+IWii4L7Y>TmLmgA2E^Egz`2
+S1
+R1
+w1740796185
+8msd.sv
+Fmsd.sv
+!i122 11
+L0 26 40
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.3_1;73
+r1
+!s85 0
+31
+!s108 1740796232.000000
+!s107 msd.sv|
+!s90 msd.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
