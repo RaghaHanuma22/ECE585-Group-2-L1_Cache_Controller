@@ -1,0 +1,164 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+R0
+!s12c _opt
+R0
+R0
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX
+T_opt
+!s110 1741032291
+V`6K>8_zFY3nW5`Z3EiWnd2
+04 11 4 work LRU_4way_tb fast 0
+=1-5254006cf05e-67c60b63-1ab86-b50
+R0
+Z2 !s12f OEM100
+Z3 !s12b OEM100
+Z4 !s124 OEM100
+Z5 !s135 nogc
+Z6 o-quiet -auto_acc_if_foreign -work work +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2024.2;79
+R1
+T_opt1
+!s110 1741032343
+Vm0V@TLnIiiz194@lAcj:W1
+Z9 04 11 4 work LRU_8way_tb fast 0
+=1-5254006cf05e-67c60b96-c0a85-1351
+R0
+R2
+R3
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+vLRU_4way
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1741032244
+!i10b 1
+!s100 zI:@0aHDd?Bc<?75;lNSL0
+I2NUBX4?]9YJn=zhM=joAL1
+S1
+Z11 d/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU
+w1741031989
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv
+!i122 0
+L0 2 44
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z14 !s108 1741032244.000000
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv|
+!i113 0
+Z15 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@l@r@u_4way
+vLRU_4way_tb
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv
+R10
+Z16 !s110 1741032245
+!i10b 1
+!s100 cF2bb<SH9CNb0Dio3[2[j2
+IPPTM^g?<eO1KJ2DAd;:oP2
+S1
+R11
+w1741032013
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv
+!i122 2
+L0 1 59
+R12
+R13
+r1
+!s85 0
+31
+Z17 !s108 1741032245.000000
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv|
+!i113 0
+R15
+R7
+n@l@r@u_4way_tb
+vLRU_8way
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv
+R10
+R16
+!i10b 1
+!s100 ^`ckLN`=VZ<RX9iol1bM?1
+Inn5<3W;8Udb1nFl^ZBlTc0
+S1
+R11
+w1741031561
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv
+!i122 1
+L0 1 39
+R12
+R13
+r1
+!s85 0
+31
+R14
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv|
+!i113 0
+R15
+R7
+n@l@r@u_8way
+vLRU_8way_tb
+2/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv
+R10
+R16
+!i10b 1
+!s100 nc0ID>=Q>;LlQ8k6E5b@m2
+IiON8^RelYBK`C@P:M=dJF1
+S1
+R11
+w1741031588
+8/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv
+F/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv
+!i122 3
+L0 1 63
+R12
+R13
+r1
+!s85 0
+31
+R17
+!s107 /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv|
+!i113 0
+R15
+R7
+n@l@r@u_8way_tb
+Ttb
+!s110 1741032328
+V=JXmZ29[WVC0a_ThdiW773
+R9
+R0
+R2
+R3
+R4
+R5
+o+acc
+R7
+ntb
+R8
+R1

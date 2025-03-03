@@ -1,0 +1,29 @@
+/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_8.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module LRU_8way
+
+Top level modules:
+	LRU_8way
+
+} {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_4.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module LRU_4way
+
+Top level modules:
+	LRU_4way
+
+} {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module LRU_8way_tb
+
+Top level modules:
+	LRU_8way_tb
+
+} {} {}} /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv {1 {vlog -work work -vopt -sv -stats=none /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module LRU_4way_tb
+
+Top level modules:
+	LRU_4way_tb
+
+} {} {}}

@@ -1,0 +1,1 @@
+/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 393216 work.LRU_8way_tb -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt1 -id 1-5254006cf05e-67c60b96-c0a85-1351 +__design_bin_path+/u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU +__betafsm

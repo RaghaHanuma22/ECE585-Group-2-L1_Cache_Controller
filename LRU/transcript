@@ -1,0 +1,114 @@
+# //  Questa Sim-64
+# //  Version 2024.2 linux_x86_64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project Conversions
+# reading /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../modelsim.ini
+# Loading project LRU
+# Compile of LRU_4.sv was successful.
+# Compile of LRU_8.sv was successful.
+# Compile of LRU_tb4.sv was successful.
+# Compile of LRU_tb8.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+vopt work.LRU_4way_tb -o tb
+# QuestaSim-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:04:37 on Mar 03,2025
+# vopt -reportprogress 300 work.LRU_4way_tb -o tb 
+# 
+# Top level modules:
+# 	LRU_4way_tb
+# 
+# Analyzing design...
+# -- Loading module LRU_4way_tb
+# -- Loading module LRU_4way
+# Optimizing 2 design-units (inlining 1/2 module instances):
+# -- Inlining module LRU_4way(fast)
+# -- Optimizing module LRU_4way_tb(fast)
+# Optimized design name is tb
+# End time: 12:04:39 on Mar 03,2025, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+vsim work.LRU_4way_tb -voptargs=+acc
+# vsim work.LRU_4way_tb -voptargs="+acc" 
+# Start time: 12:04:50 on Mar 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.LRU_4way_tb(fast)
+# Loading work.LRU_4way(fast)
+run -all
+# Testing LRU 4-Way...
+# Accessed Way: 2 | LRU 4-Way Evict: 3
+# Accessed Way: 0 | LRU 4-Way Evict: 3
+# Accessed Way: 3 | LRU 4-Way Evict: 1
+# Accessed Way: 1 | LRU 4-Way Evict: 2
+# Accessed Way: 2 | LRU 4-Way Evict: 0
+# Accessed Way: 0 | LRU 4-Way Evict: 3
+# Accessed Way: 3 | LRU 4-Way Evict: 1
+# Accessed Way: 1 | LRU 4-Way Evict: 2
+# Simulation complete.
+# ** Note: $stop    : /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv(44)
+#    Time: 220 ns  Iteration: 0  Instance: /LRU_4way_tb
+# Break in Module LRU_4way_tb at /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb4.sv line 44
+exit -sim
+# End time: 12:05:15 on Mar 03,2025, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 6
+vopt work.LRU_8way_tb +acc -o tb
+# QuestaSim-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# Start time: 12:05:28 on Mar 03,2025
+# vopt -reportprogress 300 work.LRU_8way_tb "+acc" -o tb 
+# 
+# Top level modules:
+# 	LRU_8way_tb
+# 
+# Analyzing design...
+# -- Loading module LRU_8way_tb
+# -- Loading module LRU_8way
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# -- Optimizing module LRU_8way(fast)
+# -- Optimizing module LRU_8way_tb(fast)
+# Optimized design name is tb
+# End time: 12:05:29 on Mar 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.LRU_8way_tb
+# vsim -voptargs="+acc" work.LRU_8way_tb 
+# Start time: 12:05:42 on Mar 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.LRU_8way_tb(fast)
+# Loading work.LRU_8way(fast)
+run -all
+# Testing LRU 8-Way...
+# Accessed Way: 2 | LRU 8-Way Evict: 7
+# Accessed Way: 0 | LRU 8-Way Evict: 7
+# Accessed Way: 3 | LRU 8-Way Evict: 7
+# Accessed Way: 1 | LRU 8-Way Evict: 7
+# Accessed Way: 4 | LRU 8-Way Evict: 7
+# Accessed Way: 5 | LRU 8-Way Evict: 7
+# Accessed Way: 6 | LRU 8-Way Evict: 7
+# Accessed Way: 7 | LRU 8-Way Evict: 2
+# Accessed Way: 2 | LRU 8-Way Evict: 0
+# Accessed Way: 0 | LRU 8-Way Evict: 3
+# Accessed Way: 3 | LRU 8-Way Evict: 1
+# Accessed Way: 1 | LRU 8-Way Evict: 4
+# Simulation complete.
+# ** Note: $stop    : /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv(48)
+#    Time: 300 ns  Iteration: 0  Instance: /LRU_8way_tb
+# Break in Module LRU_8way_tb at /u/gowthami/ECE585-Group-2-L1_Cache_Controller/LRU/LRU_tb8.sv line 48
+exit
+# End time: 12:06:07 on Mar 03,2025, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 2
