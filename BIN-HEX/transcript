@@ -1,53 +1,53 @@
 # //  Questa Sim-64
-# //  Version 2024.2 linux_x86_64 May 20 2024
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
 # //
-# // Unpublished work. Copyright 2024 Siemens
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
 # //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
 # //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# Loading project Conversions
-# Compile of bintohex.sv was successful.
-# Compile of bintohex_tb.sv was successful.
+# Loading project HextoBin
 # Compile of hextobin.sv was successful.
 # Compile of hextobin_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-vopt work.HexToBin_tb -o tb
-# QuestaSim-64 vopt 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 22:33:26 on Feb 27,2025
-# vopt -reportprogress 300 work.HexToBin_tb -o tb 
+# 2 compiles, 0 failed with no errors.
+vopt work.hextobin_tb -o tb1
+# QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 22:43:47 on Feb 27,2025
+# vopt -reportprogress 300 work.hextobin_tb -o tb1 
 # 
 # Top level modules:
-# 	HexToBin_tb
+# 	hextobin_tb
 # 
 # Analyzing design...
-# -- Loading module HexToBin_tb
-# -- Loading module HexToBin
-# Incremental compilation check found no design-units have changed.
-# Optimized design name is tb
-# End time: 22:33:27 on Feb 27,2025, Elapsed time: 0:00:01
+# -- Loading module hextobin_tb
+# -- Loading module HexToBinary
+# Optimizing 2 design-units (inlining 1/2 module instances):
+# -- Inlining module HexToBinary(fast)
+# -- Optimizing module hextobin_tb(fast)
+# Optimized design name is tb1
+# End time: 22:43:48 on Feb 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.HexToBin_tb -voptargs=+acc
-# vsim work.HexToBin_tb -voptargs="+acc" 
-# Start time: 22:33:37 on Feb 27,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
+vsim work.hextobin_tb -voptargs=+acc
+# vsim work.hextobin_tb -voptargs="+acc" 
+# Start time: 22:44:03 on Feb 27,2025
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
-# Loading work.HexToBin_tb(fast)
-# Loading work.HexToBin(fast)
+# Loading work.hextobin_tb(fast)
+# Loading work.HexToBinary(fast)
 run -all
-# Hex: 12345678 -> Binary: 10000111011001010100001100100001
-# Hex: ABCDEF12 -> Binary: 00100001111111101101110010111010
-# Hex: 00000000 -> Binary: 00000000000000000000000000000000
-# Hex: FFFFFFFF -> Binary: 11111111111111111111111111111111
-# ** Note: $stop    : /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv(59)
-#    Time: 40 ns  Iteration: 0  Instance: /HexToBin_tb
-# Break in Module HexToBin_tb at /u/gowthami/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv line 59
-exit
-# End time: 22:34:51 on Feb 27,2025, Elapsed time: 0:01:14
+# Hex Input: a5f3c9b2 | Binary Output: 10100101111100111100100110110010
+# Hex Input: 1a2b3c4d | Binary Output: 00011010001010110011110001001101
+# Hex Input: ffffffff | Binary Output: 11111111111111111111111111111111
+# Hex Input: 00000000 | Binary Output: 00000000000000000000000000000000
+# ** Note: $finish    : /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv(33)
+#    Time: 40 ns  Iteration: 0  Instance: /hextobin_tb
+# 1
+# Break in Module hextobin_tb at /u/ajalgar/ECE585-Group-2-L1_Cache_Controller/BIN-HEX/hextobin_tb.sv line 33
+# End time: 22:44:23 on Feb 27,2025, Elapsed time: 0:00:20
 # Errors: 0, Warnings: 2
