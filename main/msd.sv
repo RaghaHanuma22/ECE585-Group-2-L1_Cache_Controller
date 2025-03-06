@@ -42,7 +42,6 @@ case (n)
             //function for LRU
           end
         end
-        $display("Current state is %s!",current_state);
         $display("Now cache has %p",d_cache[set_id]);
     end
     end
@@ -83,20 +82,19 @@ case (n)
         end
         
     end
-    $display("Current state is %s!",current_state);
         $display("Now cache has %p",d_cache[set_id]);
     end
 
     2:begin //Instruction fetch to L1 instructions cache
       set_id = hex_value[19:6];
       if(i_cache_check(i_cache,hex_value)) begin
-        if(current_state == I) begin
-        current_state = E;    //First cache hit comes from acting processor
+        if(i_cache[set_id][i_way_idx].current_state == I) begin
+        i_cache[set_id][i_way_idx].current_state = E;    //First cache hit comes from acting processor
         end
         else begin
-          current_state = S;  //Considering that the 2nd cache hit comes from a different processor
+          i_cache[set_id][i_way_idx].current_state = S;  //Considering that the 2nd cache hit comes from a different processor
         end
-        $display("Current state is %s!",current_state);
+        $display("Current state is %s!",i_cache[set_id][i_way_idx].current_state);
       end
       else begin
         for(int j=0;j<i_ways;j++) begin
@@ -108,8 +106,16 @@ case (n)
             $display("Cache Full da venna!!");
           end
         end
-        $display("Current state is %s!",current_state);
+        //$display("Current state is %s!",current_state);
         $display("Now cache has %p",i_cache[set_id]);
+      end
+    end
+
+    3:begin
+      set_id = hex_value[19:6];
+      if(d_cache_check(d_cache,hex_value)) begin
+        d_cache[set_id][d_way_idx].current_state = I;
+        $display("Now cache has %p",d_cache[set_id]);
       end
     end
 
@@ -125,8 +131,29 @@ case (n)
       current_state=I;
     end
 
+    9: begin
+      //for data cache
+      $display("Displaying Cache contents:");
+      for(int set_idx=0; set_idx<sets; set_idx++) begin
+        $display("Set: %0d", set_idx);
+        for(int way_idx= 0; way_idx<d_ways; way_idx++) begin
+          $display("Way: %0d: Tag:%0h, state: %s", way_idx, d_cache[set_idx][way_idx].tag, d_cache[set_idx][way_idx].current_state);
+        end        
+      end      
+       $display("Instruction cache contents:");
+  //for instruction cache
+      for(int set_idx=0; set_idx<sets; set_idx++) begin
+        $display("Set: %0d", set_idx);
+        for(int way_idx= 0; way_idx<i_ways; way_idx++) begin
+          $display("Way: %0d: Tag:%h, state: %s", way_idx, i_cache[set_idx][way_idx].tag, i_cache[set_idx][way_idx].current_state);
+        end        
+      end
+
+    end
+
+
     default: begin
-      current_state = I;
+      //current_state = I;
     end
 
     
@@ -177,7 +204,10 @@ endfunction
   #10;
   process_cache(1);
   #10;
-  process_cache(8);
+  //process_cache(8);
+  #10;
+  //process_cache(9);
+  process_cache(3);
 
     
     $fclose(fd);
