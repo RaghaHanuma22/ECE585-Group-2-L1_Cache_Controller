@@ -6,14 +6,159 @@ import pkg_cache::*;
   logic [31:0] hex_value;   // To store the 8-digit hex value (32 bits)
   bit [13:0] set_id;
 
-typedef enum bit [1:0] {M=2'b00,E=2'b01,S=2'b10,I=2'b11} mesi_state_t;
 
-mesi_state_t current_state=I;
 /*
 function mesi_state_t next_state(mesi_state_t current_state, );
 
 endfunction
 */
+
+function void process_cache(bit [3:0] n);
+case (n)
+    0: begin //Read request to L1 data cache
+      set_id = hex_value[19:6];
+      if(d_cache_check(d_cache,hex_value)) begin
+        $display("Cache hit for address %0h in way %0h",hex_value,d_way_idx);
+        if(d_cache[set_id][d_way_idx].current_state == I) begin
+        d_cache[set_id][d_way_idx].current_state = E;    //First cache hit comes from acting processor
+        end
+        else if(d_cache[set_id][d_way_idx].current_state == M) begin
+          d_cache[set_id][d_way_idx].current_state = M;
+        end
+        else begin
+          d_cache[set_id][d_way_idx].current_state = S;  //Considering that the 2nd cache hit comes from a different processor
+        end
+        $display("Current state is %s!",d_cache[set_id][d_way_idx].current_state);
+      end
+      else begin
+        for(int j=0;j<d_ways;j++) begin
+          if(d_cache[set_id][j].tag==0) begin
+          d_cache[set_id][j].tag=hex_value[31:20];
+          d_cache[set_id][j].current_state = E;
+          break;
+          end
+          else begin
+            $display("Cache Full da venna!!");
+            //function for LRU
+          end
+        end
+        $display("Now cache has %p",d_cache[set_id]);
+    end
+    end
+
+    1:begin //write request to L1 data cache
+      set_id = hex_value[19:6];
+      if(d_cache_check(d_cache,hex_value)) begin
+        $display("Cache hit for address %0h in way %0h",hex_value,d_way_idx);
+        $display("Data written at address %0h in way %0h",hex_value,d_way_idx);
+        if(d_cache[set_id][d_way_idx].current_state == I) begin
+        d_cache[set_id][d_way_idx].current_state = M;    //First cache hit comes from acting processor
+        end
+        else if(d_cache[set_id][d_way_idx].current_state == E) begin
+          d_cache[set_id][d_way_idx].current_state = M;
+        end
+        else if(d_cache[set_id][d_way_idx].current_state == S) begin
+            d_cache[set_id][d_way_idx].current_state = M;
+          end
+        else begin
+          d_cache[set_id][d_way_idx].current_state = M; 
+        end
+        $display("Current state is %s!",d_cache[set_id][d_way_idx].current_state);
+      end
+      else begin
+        for(int j=0;j<d_ways;j++) begin
+          if(d_cache[set_id][j].tag==0) begin
+          d_cache[set_id][j].tag=hex_value[31:20];
+          if(d_cache [set_id][j].current_state == I) begin
+          $display("Data is also being written through to Main Memory");
+          end
+          d_cache[set_id][j].current_state = M;
+          break;
+          end
+          else begin
+            $display("Cache Full da venna!!");
+            //function for LRU
+          end
+        end
+        
+    end
+        $display("Now cache has %p",d_cache[set_id]);
+    end
+
+    2:begin //Instruction fetch to L1 instructions cache
+      set_id = hex_value[19:6];
+      if(i_cache_check(i_cache,hex_value)) begin
+        if(i_cache[set_id][i_way_idx].current_state == I) begin
+        i_cache[set_id][i_way_idx].current_state = E;    //First cache hit comes from acting processor
+        end
+        else begin
+          i_cache[set_id][i_way_idx].current_state = S;  //Considering that the 2nd cache hit comes from a different processor
+        end
+        $display("Current state is %s!",i_cache[set_id][i_way_idx].current_state);
+      end
+      else begin
+        for(int j=0;j<i_ways;j++) begin
+          if(i_cache[set_id][j].tag==0) begin
+          i_cache[set_id][j].tag=hex_value[31:20];
+          break;
+          end
+          else begin
+            $display("Cache Full da venna!!");
+          end
+        end
+        //$display("Current state is %s!",current_state);
+        $display("Now cache has %p",i_cache[set_id]);
+      end
+    end
+
+    3:begin
+      set_id = hex_value[19:6];
+      if(d_cache_check(d_cache,hex_value)) begin
+        d_cache[set_id][d_way_idx].current_state = I;
+        $display("Now cache has %p",d_cache[set_id]);
+      end
+    end
+
+    4:begin
+        /*
+          RFO doubt: what happens if P1 is not in M state then where does P2 get its data from? 
+        */
+    end
+
+    8:begin
+      i_cache_init();
+      d_cache_init();
+      current_state=I;
+    end
+
+    9: begin
+      //for data cache
+      $display("Displaying Cache contents:");
+      for(int set_idx=0; set_idx<sets; set_idx++) begin
+        $display("Set: %0d", set_idx);
+        for(int way_idx= 0; way_idx<d_ways; way_idx++) begin
+          $display("Way: %0d: Tag:%0h, state: %s", way_idx, d_cache[set_idx][way_idx].tag, d_cache[set_idx][way_idx].current_state);
+        end        
+      end      
+       $display("Instruction cache contents:");
+  //for instruction cache
+      for(int set_idx=0; set_idx<sets; set_idx++) begin
+        $display("Set: %0d", set_idx);
+        for(int way_idx= 0; way_idx<i_ways; way_idx++) begin
+          $display("Way: %0d: Tag:%h, state: %s", way_idx, i_cache[set_idx][way_idx].tag, i_cache[set_idx][way_idx].current_state);
+        end        
+      end
+
+    end
+
+
+    default: begin
+      //current_state = I;
+    end
+
+    
+  endcase
+endfunction
 
   // Main execution
   initial begin
@@ -23,6 +168,8 @@ endfunction
     else 
       $display("File was not opened!");
     
+    i_cache_init();
+    d_cache_init();
     while (!$feof(fd)) begin
       $fgets(line, fd);
       if (line.len() > 0) begin
@@ -40,8 +187,12 @@ endfunction
           end else begin
             $display("Failed to convert hex string: %s", hex_str);
           end
+          process_cache(n);
           break; //to remove
         end
+
+      
+
       end
 
     
@@ -49,31 +200,14 @@ endfunction
 
     end
 
-  case (n)
-    0:begin
-      set_id = hex_value[19:6];
-      if(i_cache_check(i_cache,hex_value)) begin
-        current_state = E;
-        $display("Current state is %s!",current_state);
-      end
-      else begin
-        for(int j=0;j<i_ways;j++) begin
-          if(i_cache[set_id][j].tag==0) begin
-          i_cache[set_id][j].tag=hex_value[31:20];
-          break;
-          end
-          else begin
-            $display("Cache Full da venna!!");
-          end
-        end
-        $display("Current state is %s!",current_state);
-        $display("Now cache has %p",i_cache[set_id]);
-      end
-    end
-    default: begin
-      current_state = I;
-    end
-  endcase
+  process_cache(0);
+  #10;
+  process_cache(1);
+  #10;
+  //process_cache(8);
+  #10;
+  //process_cache(9);
+  process_cache(3);
 
     
     $fclose(fd);
