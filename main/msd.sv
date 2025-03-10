@@ -5,9 +5,11 @@ import pkg_cache::*;
   bit [3:0] n;  // To store the leading 0
   logic [31:0] hex_value;   // To store the 8-digit hex value (32 bits)
   bit [13:0] set_id;
-  bit [1:0] d_victim_cache;
+  bit [2:0] d_victim_cache;
   bit [1:0] i_victim_cache;
   bit replacement_done;
+  int data_hit;
+  int instruction_hit;
 
 
 function void process_cache(bit [3:0] n);
@@ -77,6 +79,9 @@ case (n)
         // Step 3: If no invalid states, use LRU victim
         if(!empty_flag && !invalid_flag) begin
           d_victim_cache = find_d_LRU_way(set_id);
+          if(d_cache[set_id][d_victim_cache].current_state == M) begin
+            $display("Modified line is being evicted, writing back data to L2 cache at address: %0h",hex_value);
+          end
           d_cache[set_id][d_victim_cache].tag = hex_value[31:20];
           d_cache[set_id][d_victim_cache].current_state = E;
           d_LRU_Update(set_id, d_victim_cache);
@@ -91,6 +96,7 @@ case (n)
     1:begin //write request to L1 data cache
       increment_write();
       set_id = hex_value[19:6];
+
       if(d_cache_check(d_cache,hex_value)) begin
         $display("Cache hit for address %0h in way %0h",hex_value,d_way_idx);
         $display("Data written at address %0h in way %0h",hex_value,d_way_idx);
@@ -115,7 +121,7 @@ case (n)
       //cache miss case
       else begin
         increment_d_miss();
-         $display("Cache miss for address %0h, reading from L2 cache", hex_value);
+         $display("Cache miss for write at address %0h, reading from L2 cache", hex_value);
         replacement_done = 0;
         empty_flag = 0;
         invalid_flag = 0;
@@ -125,7 +131,7 @@ case (n)
           if(d_cache[set_id][j].tag==0) begin
           d_cache[set_id][j].tag=hex_value[31:20];
           if(d_cache [set_id][j].current_state == I) begin
-          $display("Data is also being written through to L2 Cache"); //write through for first miss
+          $display("Data is also being written through to L2 Cache at address: %0h",hex_value); //write through for first miss
           end
           d_LRU_Update(set_id,j);
           d_cache[set_id][j].current_state = M;
@@ -230,8 +236,9 @@ case (n)
           $display("Replaced LRU victim way %0d", i_victim_cache);
         end
 
-        $display("Now cache has %p",i_cache[set_id]);
+        
       end
+      $display("Now cache has %p",i_cache[set_id]);
     end
 
     3:begin
@@ -305,51 +312,36 @@ endfunction
     d_cache_init();
     
     while (!$feof(fd)) begin
-      $fgets(line, fd);
-      
-      if (line.len() > 0) begin
-        // Extract the leading bit (first character)
-        n = line.substr(0, 0).atoi();
-        
-        // Extract and convert the 8-digit hex value
-        if (line.len() >= 11) begin  // Ensure line has enough characters
-           hex_str = line.substr(2, 9);  // Skip the leading bit and space
-          hex_value = '0;  // Initialize to zero
-          
-          // Convert string hex value to actual bits
-          if ($sscanf(hex_str, "%h", hex_value) == 1) begin
-            $display("Leading bit: %0d, Hex value: %b", n, hex_value);
-          end else begin
-            $display("Failed to convert hex string: %s", hex_str);
-          end
-          process_cache(n);
-          `ifdef debug
-            break;
-          `endif
-           //to remove
-        end
+      void'($fgets(line, fd));
 
-      
-
-      end
-
+// After extracting the leading bit
+if (line.len() > 2) begin  // Ensure line has enough characters
+   // Just use sscanf directly with the format that matches your input line
+   if ($sscanf(line, "%d %h", n, hex_value) == 2) begin
+     $display("Leading bit: %0d, Hex value: %b", n, hex_value);
+     process_cache(n);
+   end else begin
+     $display("Failed to parse line: %s", line);
+   end
+end
     
 
 
     end
-/*
-  process_cache(0);
-  #10;
-  process_cache(1);
-  #10;
-  //process_cache(8);
-  #10;
-  //process_cache(9);
-  //process_cache(3);
-  #10;
-  process_cache(4);
-*/
+
     $fclose(fd);
     $display("File operation done!");
+  $display("-----------------Cache Summary------------------");
+  $display("\nNo. of data cache reads: %0d",d_cache_read);
+  $display("No. of instruction cache reads: %0d",i_cache_read);
+  $display("No. of data cache writes: %0d",cache_write);
+  $display("No. of data cache hits: %0d",d_cache_hit);
+  $display("No. of instruction cache hits: %0d",i_cache_hit);
+  $display("No. of data cache misses: %0d",d_cache_miss);
+  $display("No. of instruction cache misses: %0d",i_cache_miss);
+
+  d_hit_ratio();
+  i_hit_ratio();
   end
+
 endmodule
