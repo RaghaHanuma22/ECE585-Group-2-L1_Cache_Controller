@@ -115,7 +115,7 @@ endfunction
 
 
 // LRU Update task for instruction cache - uses 2-bit LRU tracking
-task automatic i_LRU_Update(logic [13:0] set_idx, logic [1:0] way_idx);
+function automatic void i_LRU_Update(logic [13:0] set_idx, logic [1:0] way_idx);
     logic [1:0] current_lru;
     
     // Store current LRU value of the accessed way
@@ -130,10 +130,10 @@ task automatic i_LRU_Update(logic [13:0] set_idx, logic [1:0] way_idx);
     
     // Set the accessed way's LRU value to maximum (3 for 2-bit field)
     i_cache[set_idx][way_idx].lru_bits = 2'b11;
-endtask
+endfunction
 
 // LRU Update task for data cache - uses 3-bit LRU tracking
-task automatic d_LRU_Update(logic [13:0] set_idx, logic [2:0] way_idx);
+function automatic void d_LRU_Update(logic [13:0] set_idx, logic [2:0] way_idx);
     logic [2:0] current_lru;
     
     // Store current LRU value of the accessed way
@@ -148,7 +148,7 @@ task automatic d_LRU_Update(logic [13:0] set_idx, logic [2:0] way_idx);
     
     // Set the accessed way's LRU value to maximum (7 for 3-bit field)
     d_cache[set_idx][way_idx].lru_bits = 3'b111;
-endtask
+endfunction
 
 // Function to find LRU way for instruction cache
 function automatic logic [1:0] find_i_LRU_way(logic [13:0] set_idx);
@@ -161,6 +161,7 @@ function automatic logic [1:0] find_i_LRU_way(logic [13:0] set_idx);
     // Fallback - should never reach here if LRU is properly maintained
     return 0;
 endfunction
+
 
 // Function to find LRU way for data cache
 function automatic logic [2:0] find_d_LRU_way(logic [13:0] set_idx);
@@ -176,37 +177,51 @@ endfunction
 
 
 
-
 ///////////////////////////////////////////////////////////////////
 
 
 
-function int increment_d_hit();
-    return d_cache_hit++;
+function void increment_d_hit();
+     d_cache_hit++;
 endfunction
 
-function int increment_d_miss();
-    return d_cache_miss++;
+function void increment_d_miss();
+     d_cache_miss++;
 endfunction
 
-function int increment_d_read();
-    return d_cache_read++;
+function void increment_d_read();
+     d_cache_read++;
 endfunction
 
-function int increment_write();
-    return cache_write++;
+function void increment_write();
+     cache_write++;
 endfunction
 
-function int increment_i_hit();
-    return i_cache_hit++;
+function void increment_i_hit();
+     i_cache_hit++;
 endfunction
 
-function int increment_i_miss();
-    return i_cache_miss++;
+function void increment_i_miss();
+     i_cache_miss++;
 endfunction
 
-function int increment_i_read();
-    return i_cache_read++;
+function void increment_i_read();
+     i_cache_read++;
+endfunction
+
+
+function void d_hit_ratio();
+
+	$display ("Data Cache Hit Ratio = %0f percent", ((real'(d_cache_hit) / (d_cache_hit + d_cache_miss)))*100);
+
+endfunction
+
+function void i_hit_ratio();
+
+	$display ("Instruction Cache Hit Ratio = %0f percent", ((real'(i_cache_hit) / (i_cache_hit + i_cache_miss)))*100);
+
 endfunction
 
 endpackage
+
+
