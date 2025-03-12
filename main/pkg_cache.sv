@@ -52,11 +52,11 @@ for(int i=0;i<i_ways;i++) begin
 end
 
 if(hit) begin
-  $display("Cache hit!");
+  //$display("Cache hit!");
   return 1;
 end
   else begin
-  $display("Cache miss!");
+  //$display("Cache miss!");
   return 0;
   end
 
@@ -82,7 +82,7 @@ if(hit) begin
   return 1;
 end
   else begin
-  $display("Cache miss!");
+  //$display("Cache miss!");
   return 0;
   end 
 
