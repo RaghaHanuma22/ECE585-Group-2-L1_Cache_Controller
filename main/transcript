@@ -1,37 +1,16 @@
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 00:08:03 on Mar 09,2025
+# Start time: 20:44:45 on Mar 11,2025
 # vlog pkg_cache.sv msd.sv 
 # -- Compiling package pkg_cache
 # -- Compiling module msd
 # -- Importing package pkg_cache
-# ** Warning: msd.sv(17): (vlog-2240) Treating stand-alone use of function 'increment_d_read' as an implicit VOID cast.
-# ** Warning: msd.sv(23): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(24): (vlog-2240) Treating stand-alone use of function 'increment_d_hit' as an implicit VOID cast.
-# ** Warning: msd.sv(41): (vlog-2240) Treating stand-alone use of function 'increment_d_miss' as an implicit VOID cast.
-# ** Warning: msd.sv(53): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(68): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(82): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(92): (vlog-2240) Treating stand-alone use of function 'increment_write' as an implicit VOID cast.
-# ** Warning: msd.sv(97): (vlog-2240) Treating stand-alone use of function 'increment_d_hit' as an implicit VOID cast.
-# ** Warning: msd.sv(98): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(117): (vlog-2240) Treating stand-alone use of function 'increment_d_miss' as an implicit VOID cast.
-# ** Warning: msd.sv(130): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(147): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(161): (vlog-2875) Task "d_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(170): (vlog-2240) Treating stand-alone use of function 'increment_i_read' as an implicit VOID cast.
-# ** Warning: msd.sv(174): (vlog-2875) Task "i_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(175): (vlog-2240) Treating stand-alone use of function 'increment_i_hit' as an implicit VOID cast.
-# ** Warning: msd.sv(188): (vlog-2240) Treating stand-alone use of function 'increment_i_miss' as an implicit VOID cast.
-# ** Warning: msd.sv(200): (vlog-2875) Task "i_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(215): (vlog-2875) Task "i_LRU_Update" is being called in function "process_cache".
-# ** Warning: msd.sv(229): (vlog-2875) Task "i_LRU_Update" is being called in function "process_cache".
 # 
 # Top level modules:
 # 	msd
-# End time: 00:08:04 on Mar 09,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 21
-# vsim msd 
-# Start time: 00:08:04 on Mar 09,2025
+# End time: 20:44:45 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim msd "+TRACE_FILE=new_trace.din" "+MODE=0" 
+# Start time: 20:44:45 on Mar 11,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2021.3_1 linux_x86_64 Aug 15 2021
@@ -50,117 +29,20 @@
 # Loading sv_std.std
 # Loading work.pkg_cache(fast)
 # Loading work.msd(fast)
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
-#    Time: 0 ns  Iteration: 0  Instance: /msd File: msd.sv Line: 304
 # File opened!!
 # Initializing/Resetting Instn Cache!
 # Initializing/Resetting Data Cache!
-# Leading bit: 0, Hex value: 10011000010011011110000100110010
-# Cache miss!
-# Cache miss for address 984de132
-# Replaced in empty way 0
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:2436, lru_bits:7, data:0, current_state:E}}
-# Leading bit: 1, Hex value: 10011000010011011110000100110010
-# Cache hit for address 984de132 in way 0
-# Data written at address 984de132 in way 0
-# Current state is M!
-# Leading bit: 0, Hex value: 00010001011011011110000100101111
-# Cache miss!
-# Cache miss for address 116de12f
-# Replaced in empty way 1
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:278, lru_bits:7, data:0, current_state:E}, '{tag:2436, lru_bits:6, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 00010000000011011110000100110000
-# Cache miss!
-# Cache miss for address 100de130
-# Replaced in empty way 2
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:256, lru_bits:7, data:0, current_state:E}, '{tag:278, lru_bits:6, data:0, current_state:E}, '{tag:2436, lru_bits:5, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 10011001100111011110000100101110
-# Cache miss!
-# Cache miss for address 999de12e
-# Replaced in empty way 3
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:2457, lru_bits:7, data:0, current_state:E}, '{tag:256, lru_bits:6, data:0, current_state:E}, '{tag:278, lru_bits:5, data:0, current_state:E}, '{tag:2436, lru_bits:4, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 01100100010111011110000100001010
-# Cache miss!
-# Cache miss for address 645de10a
-# Replaced in empty way 4
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:1605, lru_bits:7, data:0, current_state:E}, '{tag:2457, lru_bits:6, data:0, current_state:E}, '{tag:256, lru_bits:5, data:0, current_state:E}, '{tag:278, lru_bits:4, data:0, current_state:E}, '{tag:2436, lru_bits:3, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 10000100011011011110000100000111
-# Cache miss!
-# Cache miss for address 846de107
-# Replaced in empty way 5
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:2118, lru_bits:7, data:0, current_state:E}, '{tag:1605, lru_bits:6, data:0, current_state:E}, '{tag:2457, lru_bits:5, data:0, current_state:E}, '{tag:256, lru_bits:4, data:0, current_state:E}, '{tag:278, lru_bits:3, data:0, current_state:E}, '{tag:2436, lru_bits:2, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 00100001000111011110000100101000
-# Cache miss!
-# Cache miss for address 211de128
-# Replaced in empty way 6
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:529, lru_bits:7, data:0, current_state:E}, '{tag:2118, lru_bits:6, data:0, current_state:E}, '{tag:1605, lru_bits:5, data:0, current_state:E}, '{tag:2457, lru_bits:4, data:0, current_state:E}, '{tag:256, lru_bits:3, data:0, current_state:E}, '{tag:278, lru_bits:2, data:0, current_state:E}, '{tag:2436, lru_bits:1, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 01110111011111011110000100110011
-# Cache miss!
-# Cache miss for address 777de133
-# Replaced in empty way 7
-# Now cache has '{'{tag:1911, lru_bits:7, data:0, current_state:E}, '{tag:529, lru_bits:6, data:0, current_state:E}, '{tag:2118, lru_bits:5, data:0, current_state:E}, '{tag:1605, lru_bits:4, data:0, current_state:E}, '{tag:2457, lru_bits:3, data:0, current_state:E}, '{tag:256, lru_bits:2, data:0, current_state:E}, '{tag:278, lru_bits:1, data:0, current_state:E}, '{tag:2436, lru_bits:0, data:0, current_state:M}}
-# Leading bit: 0, Hex value: 00010010001111011110000100110010
-# Cache miss!
-# Cache miss for address 123de132
-# Cache full da venna!
-# Replaced LRU victim way 0
-# Now cache has '{'{tag:1911, lru_bits:6, data:0, current_state:E}, '{tag:529, lru_bits:5, data:0, current_state:E}, '{tag:2118, lru_bits:4, data:0, current_state:E}, '{tag:1605, lru_bits:3, data:0, current_state:E}, '{tag:2457, lru_bits:2, data:0, current_state:E}, '{tag:256, lru_bits:1, data:0, current_state:E}, '{tag:278, lru_bits:0, data:0, current_state:E}, '{tag:291, lru_bits:7, data:0, current_state:E}}
-# Leading bit: 0, Hex value: 00100011010011011110000100000100
-# Cache miss!
-# Cache miss for address 234de104
-# Cache full da venna!
-# Replaced LRU victim way 1
-# Now cache has '{'{tag:1911, lru_bits:5, data:0, current_state:E}, '{tag:529, lru_bits:4, data:0, current_state:E}, '{tag:2118, lru_bits:3, data:0, current_state:E}, '{tag:1605, lru_bits:2, data:0, current_state:E}, '{tag:2457, lru_bits:1, data:0, current_state:E}, '{tag:256, lru_bits:0, data:0, current_state:E}, '{tag:564, lru_bits:7, data:0, current_state:E}, '{tag:291, lru_bits:6, data:0, current_state:E}}
-# Leading bit: 2, Hex value: 10011000010011011110000100110010
-# Cache miss!
-# Cache miss for address 984de132
-# Replaced in empty way 0
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:2436, lru_bits:3, data:0, current_state:E}}
-# Leading bit: 2, Hex value: 00010001011011011110000100101111
-# Cache miss!
-# Cache miss for address 116de12f
-# Replaced in empty way 1
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:278, lru_bits:3, data:0, current_state:E}, '{tag:2436, lru_bits:2, data:0, current_state:E}}
-# Leading bit: 2, Hex value: 00010000000011011110000100110000
-# Cache miss!
-# Cache miss for address 100de130
-# Replaced in empty way 2
-# Now cache has '{'{tag:0, lru_bits:0, data:0, current_state:I}, '{tag:256, lru_bits:3, data:0, current_state:E}, '{tag:278, lru_bits:2, data:0, current_state:E}, '{tag:2436, lru_bits:1, data:0, current_state:E}}
-# Leading bit: 2, Hex value: 10011001100111011110000100101110
-# Cache miss!
-# Cache miss for address 999de12e
-# Replaced in empty way 3
-# Now cache has '{'{tag:2457, lru_bits:3, data:0, current_state:E}, '{tag:256, lru_bits:2, data:0, current_state:E}, '{tag:278, lru_bits:1, data:0, current_state:E}, '{tag:2436, lru_bits:0, data:0, current_state:E}}
-# Leading bit: 2, Hex value: 01100100010111011110000100001010
-# Cache miss!
-# Cache miss for address 645de10a
-# Cache Full da venna!!
-# Replaced LRU victim way 0
-# Now cache has '{'{tag:2457, lru_bits:2, data:0, current_state:E}, '{tag:256, lru_bits:1, data:0, current_state:E}, '{tag:278, lru_bits:0, data:0, current_state:E}, '{tag:1605, lru_bits:3, data:0, current_state:E}}
-# Leading bit: 2, Hex value: 10000100011011011110000100000111
-# Cache miss!
-# Cache miss for address 846de107
-# Cache Full da venna!!
-# Replaced LRU victim way 1
-# Now cache has '{'{tag:2457, lru_bits:1, data:0, current_state:E}, '{tag:256, lru_bits:0, data:0, current_state:E}, '{tag:2118, lru_bits:3, data:0, current_state:E}, '{tag:1605, lru_bits:2, data:0, current_state:E}}
-# Leading bit: 1, Hex value: 10011000010011011110000100110010
-# Cache miss!
-# Cache miss for address 984de132
-# Cache Full da venna!!
-# Replaced LRU victim way 2
-# Now cache has '{'{tag:1911, lru_bits:4, data:0, current_state:E}, '{tag:529, lru_bits:3, data:0, current_state:E}, '{tag:2118, lru_bits:2, data:0, current_state:E}, '{tag:1605, lru_bits:1, data:0, current_state:E}, '{tag:2457, lru_bits:0, data:0, current_state:E}, '{tag:2436, lru_bits:7, data:0, current_state:M}, '{tag:564, lru_bits:6, data:0, current_state:E}, '{tag:291, lru_bits:5, data:0, current_state:E}}
-# Leading bit: 1, Hex value: 00010001011011011110000100101111
-# Cache miss!
-# Cache miss for address 116de12f
-# Cache Full da venna!!
-# Replaced LRU victim way 3
-# Now cache has '{'{tag:1911, lru_bits:3, data:0, current_state:E}, '{tag:529, lru_bits:2, data:0, current_state:E}, '{tag:2118, lru_bits:1, data:0, current_state:E}, '{tag:1605, lru_bits:0, data:0, current_state:E}, '{tag:278, lru_bits:7, data:0, current_state:M}, '{tag:2436, lru_bits:6, data:0, current_state:M}, '{tag:564, lru_bits:5, data:0, current_state:E}, '{tag:291, lru_bits:4, data:0, current_state:E}}
-# Leading bit: 1, Hex value: 00010000000011011110000100110000
-# Cache miss!
-# Cache miss for address 100de130
-# Cache Full da venna!!
-# Replaced LRU victim way 0
-# Now cache has '{'{tag:1911, lru_bits:3, data:0, current_state:E}, '{tag:529, lru_bits:2, data:0, current_state:E}, '{tag:2118, lru_bits:1, data:0, current_state:E}, '{tag:1605, lru_bits:0, data:0, current_state:E}, '{tag:278, lru_bits:6, data:0, current_state:M}, '{tag:2436, lru_bits:5, data:0, current_state:M}, '{tag:564, lru_bits:4, data:0, current_state:E}, '{tag:256, lru_bits:7, data:0, current_state:M}}
 # File operation done!
-# End time: 00:18:31 on Mar 09,2025, Elapsed time: 0:10:27
-# Errors: 0, Warnings: 1
+# -----------------Cache Summary------------------
+# 
+# No. of data cache reads: 159631
+# No. of instruction cache reads: 757341
+# No. of data cache writes: 83030
+# No. of data cache hits: 241528
+# No. of instruction cache hits: 754368
+# No. of data cache misses: 1133
+# No. of instruction cache misses: 2973
+# Data Cache Hit Ratio = 99.533093 percent
+# Instruction Cache Hit Ratio = 99.607442 percent
+# End time: 21:30:56 on Mar 11,2025, Elapsed time: 0:46:11
+# Errors: 0, Warnings: 0
