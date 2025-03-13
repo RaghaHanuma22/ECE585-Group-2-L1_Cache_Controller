@@ -118,7 +118,7 @@ if(d_cache_check(d_cache,hex_value)) begin
      else begin
        increment_d_miss();                             // Increment data miss counter
        if(mode==1)
-         $display("Cache miss for write at address %0h, reading from L2 cache", hex_value);
+         $display("Read for ownership from L2 at address: %0h", hex_value);
        replacement_done = 0;                           // Reset replacement flag
        empty_flag = 0;                                 // Reset empty slot flag
        invalid_flag = 0;                               // Reset invalid entry flag
